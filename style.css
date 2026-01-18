@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  background: #171a21;
+  font-family: Arial, sans-serif;
+  color: #c7d5e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.auth-box {
+  width: 360px;
+  background: #1b2838;
+  padding: 28px;
+  border-radius: 4px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+label {
+  font-size: 12px;
+  color: #8f98a0;
+  margin-top: 15px;
+  display: block;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  background: #32353c;
+  border: none;
+  color: #fff;
+}
+
+button {
+  margin-top: 25px;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg,#06bfff,#2d73ff);
+  border: none;
+  color: #fff;
+  font-size: 15px;
+}
+
+/* 📱 Mobile */
+@media (max-width: 480px) {
+  .auth-box {
+    width: 90%;
+  }
+}
