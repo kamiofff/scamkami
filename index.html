@@ -1,34 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Staem Login</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Staem — Вход</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<div class="page">
-  <div class="login-card">
-    <h1>STAEM</h1>
-
-    <form method="post" action="login.php">
-      <div class="field">
-        <label>ACCOUNT NAME</label>
-        <input type="text" name="login" autocomplete="username" required>
+  <!-- Top bar -->
+  <header class="topbar">
+    <div class="topbar__inner">
+      <div class="brand">
+        <div class="brand__mark" aria-hidden="true"></div>
+        <div class="brand__name">STAEM</div>
       </div>
 
-      <div class="field">
-        <label>PASSWORD</label>
-        <input type="password" name="password" autocomplete="current-password" required>
+      <nav class="nav">
+        <a href="#">МАГАЗИН</a>
+        <a href="#" class="is-active">СООБЩЕСТВО</a>
+        <a href="#">ИНФОРМАЦИЯ</a>
+        <a href="#">ПОДДЕРЖКА</a>
+      </nav>
+
+      <div class="topbar__right">
+        <a class="install-btn" href="#">Установить Staem</a>
+        <div class="meta">
+          <a href="#">вход</a>
+          <span class="dot">|</span>
+          <a href="#">язык</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero with blurred tiles background -->
+  <main class="hero">
+    <div class="hero__bg" aria-hidden="true">
+      <div class="tiles">
+        <div class="tile t1"></div><div class="tile t2"></div><div class="tile t3"></div><div class="tile t4"></div>
+        <div class="tile t5"></div><div class="tile t6"></div><div class="tile t7"></div><div class="tile t8"></div>
+        <div class="tile t9"></div><div class="tile t10"></div><div class="tile t11"></div><div class="tile t12"></div>
+      </div>
+    </div>
+    <div class="hero__shade" aria-hidden="true"></div>
+
+    <!-- Login card -->
+    <section class="login-wrap">
+      <h1 class="login-title">Вход</h1>
+
+      <div class="login-card">
+        <!-- left: form -->
+        <div class="login-left">
+          <div class="cap">ВОЙДИТЕ, ИСПОЛЬЗУЯ ИМЯ АККАУНТА</div>
+
+          <form action="login.php" method="post" class="form">
+            <label class="label" for="login">ЛОГИН</label>
+            <input class="input" id="login" name="login" type="text" autocomplete="username" required />
+
+            <label class="label" for="password">ПАРОЛЬ</label>
+            <input class="input" id="password" name="password" type="password" autocomplete="current-password" required />
+
+            <label class="check">
+              <input type="checkbox" name="remember" />
+              <span>Запомнить меня</span>
+            </label>
+
+            <button class="btn-primary" type="submit">Войти</button>
+
+            <a class="help-link" href="#">Помогите, я не могу войти в аккаунт</a>
+          </form>
+        </div>
+
+        <!-- right: QR -->
+        <aside class="login-right">
+          <div class="cap cap--right">ИЛИ QR-КОД</div>
+
+          <div class="qr-card">
+            <div class="qr-box" aria-hidden="true">
+              <!-- Заглушка QR. Можно заменить на реальную картинку/генерацию -->
+              <div class="qr-fake"></div>
+            </div>
+
+            <div class="qr-text">
+              Используйте мобильное приложение <b>Staem</b>, чтобы войти с помощью QR-кода.
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- Bottom section -->
+  <section class="bottom">
+    <div class="bottom__inner">
+      <div class="bottom__left">
+        <div class="bottom__title">Первый раз в Staem?</div>
+        <a class="btn-secondary" href="register.html">Создать аккаунт</a>
       </div>
 
-      <button type="submit">Sign In</button>
-    </form>
-
-    <a class="forgot" href="#">Forgot your password?</a>
-  </div>
-</div>
+      <div class="bottom__right">
+        <p>
+          Это бесплатно и просто. Откройте для себя тысячи игр и найдите новых друзей.
+          Узнайте больше о <a href="#">Staem</a>.
+        </p>
+      </div>
+    </div>
+  </section>
 
 </body>
 </html>
