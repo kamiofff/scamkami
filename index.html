@@ -3,23 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sign in</title>
-<link rel="stylesheet" href="steam.css">
+<title>Staem Login</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="auth-box">
-  <h2>Sign in</h2>
+<div class="page">
+  <div class="login-card">
+    <h1>STAEM</h1>
 
-  <form method="post" action="login.php">
-    <label>Account name</label>
-    <input type="text" name="login" required>
+    <form method="post" action="login.php">
+      <div class="field">
+        <label>ACCOUNT NAME</label>
+        <input type="text" name="login" autocomplete="username" required>
+      </div>
 
-    <label>Password</label>
-    <input type="password" name="password" required>
+      <div class="field">
+        <label>PASSWORD</label>
+        <input type="password" name="password" autocomplete="current-password" required>
+      </div>
 
-    <button type="submit">Sign In</button>
-  </form>
+      <button type="submit">Sign In</button>
+    </form>
+
+    <a class="forgot" href="#">Forgot your password?</a>
+  </div>
 </div>
 
 </body>
